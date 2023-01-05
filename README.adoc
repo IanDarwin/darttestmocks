@@ -1,0 +1,3 @@
+= darttestmock
+
+A completely minimal example of mocking with Mockito.
