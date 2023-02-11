@@ -7,14 +7,17 @@ main(){
   print("New ID is ${app.process()}");
 }
 
-/// Stand-in for a full application
+/// This is the application (well, a stand-in for a real application)
 class BookmarksApp {
   BookmarksDao bookmarksDao;
 
   BookmarksApp(this.bookmarksDao);
+
+  /// This is the method we want to test
   int process() {
-    // Assume the app gets the data from a UI and inserts it
-    int newId = bookmarksDao.insertBookmark(sampleBookmark);
+    // Pretend the app gets the data from a UI and inserts it
+    var bookmark = sampleBookmark;
+    int newId = bookmarksDao.insertBookmark(bookmark);
     return newId;
   }
 }
